@@ -10,4 +10,12 @@ public class Executor {
 		textFileOperations.add(fileOperation);
 		fileOperation.execute();
 	}
+
+	public void undoOperation() {
+		if (!textFileOperations.isEmpty()) {
+			FileOperation operationToUndo = textFileOperations.remove(textFileOperations.size() - 1);
+			FileOperation operationToExecute = operationToUndo.undo();
+			operationToExecute.execute();
+		}
+	}
 }

@@ -10,8 +10,16 @@ public class TextFile {
 		logger.info("About to open file");
 	}
 
-	public void saveFile() {
-		logger.info("About to save file");
+	public void closeFile() {
+		logger.info("About to close file");
+	}
+
+	public void createFile() {
+		logger.info("About to create file");
+	}
+
+	public void deleteFile() {
+		logger.info("About to delete file");
 	}
 
 }

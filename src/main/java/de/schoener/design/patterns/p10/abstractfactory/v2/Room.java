@@ -14,7 +14,7 @@ public class Room implements Component {
 			builder.append("Direction: '");
 			builder.append(action.getKey());
 			builder.append("' with component '");
-			builder.append(action.getValue());
+			builder.append(action.getValue().describe());
 			builder.append("'.");
 		});
 		return builder.toString();
@@ -23,6 +23,19 @@ public class Room implements Component {
 	@Override
 	public void enter(Direction direction, Player player) {
 		player.setRoom(this);
+	}
+
+	public Component getComponentAt(Direction direction) {
+		return currentComponents.get(direction);
+	}
+
+	@Override
+	public boolean isOpen() {
+		return false;
+	}
+
+	public void addComponent(Direction direction, Component component) {
+		this.currentComponents.put(direction, component);
 	}
 
 }

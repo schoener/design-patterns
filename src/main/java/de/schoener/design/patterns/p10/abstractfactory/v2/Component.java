@@ -4,4 +4,6 @@ public interface Component {
 	String describe();
 
 	void enter(Direction direction, Player player);
+	
+	boolean isOpen();
 }

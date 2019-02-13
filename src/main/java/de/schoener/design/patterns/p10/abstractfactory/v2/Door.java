@@ -16,4 +16,9 @@ public class Door implements Component {
 		Room roomToChangeIn = currentRoom.equals(from) ? to : from;
 		roomToChangeIn.enter(direction, player);
 	}
+	
+	@Override
+	public boolean isOpen() {
+		return true;
+	}
 }

@@ -16,4 +16,9 @@ public class Wall implements Component {
 	public void enter(Direction direction, Player player) {
 		logger.info("you cannot enter a wall");
 	}
+	
+	@Override
+	public boolean isOpen() {
+		return false;
+	}
 }

@@ -22,6 +22,7 @@ public class Room implements Component {
 
 	@Override
 	public void enter(Direction direction, Player player) {
+		player.setRoom(this);
 	}
 
 }
